@@ -1,0 +1,212 @@
+/* *,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}*/
+
+body {
+  --light: hsl(220, 50%, 90%);
+  --primary: hsl(255, 30%, 55%);
+  --focus: hsl(210, 90%, 50%);
+  --border-color: hsla(0, 0%, 100%, .2);
+  --global-background: hsl(220, 25%, 10%);
+  --background: linear-gradient(to right, hsl(210, 30%, 20%), hsl(255, 30%, 25%));
+  --shadow-1: hsla(236, 50%, 50%, .3);
+  --shadow-2: hsla(236, 50%, 50%, .4);
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', sans-serif;
+  /* color: var(--light); */
+  /* background: var(--global-background); */
+  background: rgb(0, 0, 0);
+
+} 
+
+  #container {
+    /* max-width: 1024px; */
+    max-width: 880px;
+    margin: auto;
+  }
+  
+  #monitor {
+      background: #000; 
+      position: relative;
+      border-top: 3px solid #888; 
+      margin: 5%;
+      padding: 2% 2% 4% 2%; 
+      border-radius: 10px; 
+      border-bottom-left-radius: 50% 2%; 
+      border-bottom-right-radius: 50% 2%; 
+      transition: margin-right 1s;
+  }
+  
+  #monitor:after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 3%;
+      left: 36%;
+      height: .5%; 
+      width: 28%;
+      background: #ddd; 
+      border-radius: 50%; 
+      box-shadow: 0 0 3px 0 white; 
+  }
+  
+  #monitorscreen {
+      position: relative;
+      background-color: #777;
+      background-size: cover; 
+      background-position: top center;
+      height: 0; 
+      padding-bottom: 56.25%; 
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor:pointer;
+  }
+  
+  
+  @media all and (min-width: 960px) {
+      #monitor {
+          -webkit-animation: tvflicker .2s infinite alternate; 
+          -moz-animation:    tvflicker .5s infinite alternate; 
+          -o-animation:      tvflicker .5s infinite alternate; 
+          animation:         tvflicker .5s infinite alternate; 
+      }
+  
+      @-webkit-keyframes tvflicker {
+        0%   { box-shadow: 0 0 100px 0 rgba(200,235,255,0.4); }
+        100% { box-shadow: 0 0 95px 0 rgba(200,230,255,0.45); }
+      }
+      @-moz-keyframes tvflicker {
+        0%   { box-shadow: 0 0 100px 0 rgba(225,235,255,0.4); }
+        100% { box-shadow: 0 0 60px 0 rgba(200,220,255,0.6); }
+      }
+      @-o-keyframes tvflicker {
+        0%   { box-shadow: 0 0 100px 0 rgba(225,235,255,0.4); }
+        100% { box-shadow: 0 0 60px 0 rgba(200,220,255,0.6); }
+      }
+      @keyframes tvflicker {
+        0%   { box-shadow: 0 0 100px 0 rgba(225,235,255,0.4); }
+        100% { box-shadow: 0 0 60px 0 rgba(200,220,255,0.6); }
+      }
+  }
+
+  video{
+    width: 100%;
+    height:900px;
+    margin-top: 56.4%;
+  }
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #FFFFFF;
+    margin: 3% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 95%; /* Could be more or less, depending on screen size */
+    border-radius: 25px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+  .grid{
+    display:grid;
+    grid-template-columns: 30% 28% 38% 2%;
+    grid-template-rows: 500px;
+    grid-column-gap: 15px;
+    /* padding: 0px; */
+  }
+
+
+
+  .text{
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    font-size: 2rem;
+    color: aliceblue;
+  }
+
+  .click{
+    color: rgb(192, 3, 3);
+  }
+
+  .movie-body{
+    display:grid;
+    grid-template-columns: 1fr;
+    /* grid-template-rows: 50% 25% 25%; */
+    grid-gap: 10px;
+  }
+
+
+  .name{
+    font-family: 'Roboto Slab', serif;
+    color: #777;
+    font-size: large;
+    margin-bottom: 0;
+
+  }
+  
+
+  .name_value{
+    font-family: 'Azeret Mono', monospace;
+    font-size: larger;
+  }
+
+
+  .movie-overview{
+    display:grid;
+    grid-template-rows: 80% 15%;
+    /* grid-gap: 10px; */
+  }
+
+
+  #trailer_btn{
+    width: 80%;
+    height: 100%;
+    /* background-color: rgb(230, 222, 222); */
+    
+    background-color: rgb(218, 245, 224);
+
+    border: none;
+    border-radius: 10px;
+
+  }
+
+  .btn_txt{
+
+    text-decoration: none; 
+    color: rgb(6, 19, 92); 
+    font-family: 'Azeret Mono', monospace; 
+    font-size: 2em;
+  }

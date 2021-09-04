@@ -1,0 +1,106 @@
+<!-- https://api.themoviedb.org/3/movie/550?api_key=0039b0e2fb5f447d644a15cb529e7450 -->
+<!-- api key : 0039b0e2fb5f447d644a15cb529e7450 -->
+<!-- eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwMDM5YjBlMmZiNWY0NDdkNjQ0YTE1Y2I1MjllNzQ1MCIsInN1YiI6IjYxMjkyZjI3MjIzZTIwMDA2NjdlM2Q2MyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.UANcyR9EoBUo4rZ5VZi36bN459s7BQQXNO46MQQX8kc -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@1,500&family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Movie Generator</title>
+</head>
+<body>
+<br>
+  <nav class="text">
+    Too many movies ? Don't know what to watch ? <div class="click" >It's fine, just Click On The Screen</div>
+  </nav>
+
+    <!-- tv screen -->
+    <div id="container">
+        <div id="monitor">
+          <div id="monitorscreen" data-toggle="modal" data-target="#exampleModal"  id="m1-c">
+            <video loop autoplay muted>
+                <source src="assets/video.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+    </div>
+
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content grid">
+        
+        <div class="movie-poster" >
+          <img src="" id="movie-image" height="98%" width="100%" style="border-radius: 25px; margin:0px;">
+        </div>
+        
+        
+        <div class="movie-body">
+          
+          <div class="title_div">
+            <p id="title_name" class="name">Title</p>
+            <p id="movie-title" class="name_value" style="font-size: 2em;"></p>
+          </div>
+          
+          <div class="genre_div">
+            <p id="genre_name" class="name">Genre</p>
+            <p class="genre name_value" id="genre"></p>
+          </div>
+          
+          <div class="vote_div">
+            <p id="popularity_name" class="name">Popularity</p>
+            <p class="vote name_value" id="vote" ></p>
+          </div>
+
+          <div class="release_div">
+            <p id="release_name" class="name">Release Date</p>
+            <p class="release_date name_value" id="release_date"></p>
+          </div>
+          
+          
+          
+                 
+        </div>
+        
+        <div class="movie-overview">
+          <div class="description_div">
+            <p id="overview_name" class="name">Overview</p>
+            <p id="description" class="name_value"></p>
+          </div>
+
+          <div class="trailer_div">
+            <button id="trailer_btn">
+             <a href="" target="_blank" class="btn_txt" id="btn_txt">Watch Trailer <i class="fab fa-youtube" ></i></a>
+            </button>
+          </div>
+        </div>
+        
+        <span class="close"  style="margin-top: 0px; width: 100%; height: 100%; color: black;">&times;</span>        
+        
+      </div>
+    </div>
+
+
+
+
+
+
+    <!-- scripts  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    <script src="assets/index.js"></script>
+
+  </body>
+
+</html>
